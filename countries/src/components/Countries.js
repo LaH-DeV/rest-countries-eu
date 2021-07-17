@@ -71,7 +71,7 @@ const Countries = () => {
                         const {name} = country;
                         return (
                         <Link key={index} className="link" to={{pathname:`/countries/${name}`,state:country}}>
-                        <div className="country-item"><h4 className="country-name">{name}</h4>
+                        <div className="country-item"><h4>{name}</h4>
                             </div>
                         </Link>
                         )

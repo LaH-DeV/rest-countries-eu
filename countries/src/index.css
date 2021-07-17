@@ -1,4 +1,27 @@
+/*  
+    TABLE OF CONTENTS
+
+    1. Imports 
+    2. General styling 
+    3. List of countries 
+    4. Country details
+    5. Media queries 
+
+                        */
+  
+  
+  
+  
+/* 1. Imports */
+/* 1.1 Importing font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+
+
+
+
+
+/* 2. General styling */
 
 #root {
   margin: 0;
@@ -9,18 +32,43 @@
 }
 
 ::selection {
-  background-color: wheat;
-  color: #2b4455;
+  background-color: hsl(39, 77%, 83%);
+  color: hsl(204, 33%, 25%);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #202D36;
-  color: rgb(189, 189, 189);
+  background-color: hsl(205, 26%, 17%);
+  color: hsl(0, 0%, 74%);
   font-family: 'Open Sans', sans-serif;
   max-width: 100vw;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(205, 31%, 14%);
+  box-shadow: 0 2px 5px 2px hsl(207, 30%, 7%);
+}
+
+.footer {
+  text-align: center;
+  margin: 5% auto;
+  padding: 0 10%;
+}
+
+.footer a {
+  color: hsl(39, 77%, 83%);
+}
+
+.footer a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+
+/* 3. List of countries */
 
 .page-container {
   display: flex;
@@ -29,6 +77,37 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
+
+.filter-container {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10% auto 5px;
+}
+
+ /*filters*/
+.search {
+  background-color: hsl(205, 31%, 14%);
+  color: hsl(39, 77%, 83%);
+  border: 1px solid hsl(204, 33%, 25%);
+  font-family: inherit;
+  padding: 5px;
+  border-radius: 5px;
+} 
+
+.search::placeholder {
+  color: hsl(0, 0%, 74%);
+}
+
+.select {
+  background-color: hsl(205, 31%, 14%);
+  color: hsl(39, 77%, 83%);
+  border: 1px solid hsl(204, 33%, 25%);
+  border-radius: 5px;
+  padding: 5px;
+}
+ /*end of filters*/
 
 .container {
   display: grid;
@@ -39,12 +118,10 @@ body {
   grid-template-columns: minmax(0, 1fr);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #18252e;
-  box-shadow: 0 2px 5px 2px #0d1318;
+.link {
+  color: hsl(39, 77%, 83%);
+  width: 100%;
+  text-decoration: none;
 }
 
 .country-item {
@@ -54,76 +131,22 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  background-color: #2b4455;
+  background-color: hsl(204, 33%, 25%);
   padding: 20px;
   height: 45px;
   transition: all 50ms ease;
-  box-shadow: 1px 1px 1px 0 rgb(46, 57, 65);
-}
-
-.link {
-  color: wheat;
-  width: 100%;
-  text-decoration: none;
+  box-shadow: 1px 1px 1px 0 hsl(205, 17%, 22%);
 }
 
 .country-item:hover {
   cursor: pointer;
-  background-color: #52768f;
-  color: rgb(255, 255, 255);
+  background-color: hsl(205, 27%, 44%);
+  color: hsl(0, 0%, 100%);
   transform: translateY(-2%);
-  box-shadow: 2px 2px 2px 0 rgb(83, 100, 112);
-}
-.footer {
-  text-align: center;
-  margin: 5% auto;
-  padding: 0 10%;
+  box-shadow: 2px 2px 2px 0 hsl(205, 15%, 38%);
 }
 
-.footer a {
-  color: wheat;
-}
-.footer a:hover {
-  color: white;
-}
-.select {
-  background-color: #18252e;
-  color: wheat;
-  border: 1px solid #2b4455;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.filter-container {
-  display: flex;
-  width: 80%;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10% auto 5px;
-
-}
-
-.btn {
-  text-decoration: none;
-  color: wheat;
-  background-color: #2b4455;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  color: white;
-  background-color: #52768f;
-}
-
-.details-p {
-  font-weight: 100;
-  letter-spacing: .8px;
-  color: wheat;
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-}
+/* 4. Country details */
 
 .countryDetails {
   text-align: center;
@@ -136,8 +159,19 @@ body {
   justify-content: space-around;
 }
 
-article {
-  width: 100%;
+article {width: 100%;}
+
+.btn {
+  text-decoration: none;
+  color: hsl(39, 77%, 83%);
+  background-color: hsl(204, 33%, 25%);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(205, 27%, 44%);
 }
 
 .details-containers {
@@ -145,7 +179,7 @@ article {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color: #18252e;
+  background-color: hsl(205, 31%, 14%);
   flex-direction: column;
   padding: 2% 5% 5%;
   margin: 5% 2%;
@@ -155,6 +189,28 @@ article {
   margin-bottom: 10%;
 }
 
+.details-p {
+  font-weight: 100;
+  letter-spacing: .8px;
+  color: hsl(39, 77%, 83%);
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+
+/* 5. Media queries 
+
+  5.1 (min-width: 768px)
+  5.2 (min-width: 1024px)
+  5.3 (min-width: 1440px)
+
+                        */
+
+
+
+/* 5.1 (min-width: 768px) */
 @media (min-width: 768px) {
   .filter-container {
     width: 60%;
@@ -165,6 +221,7 @@ article {
   }
 }
 
+/* 5.2 (min-width: 1024px) */
 @media (min-width: 1024px) {
   .container {
     grid-template-columns: 1fr 1fr;
@@ -182,11 +239,13 @@ article {
     align-items: stretch;
   }
   
-.details-containers:last-of-type {
-  margin-bottom: 5%;
-}
+  .details-containers:last-of-type {
+    margin-bottom: 5%;
+  }
+
 }
 
+/* 5.3 (min-width: 1440px) */
 @media (min-width: 1440px) {
   .container {
     width: 40%;
@@ -244,17 +303,4 @@ article {
 
 }
 
-.search {
-  background-color: #18252e;
-  color: wheat;
-  border: 1px solid #2b4455;
-  font-family: inherit;
-  padding: 5px;
-  border-radius: 5px;
-   /*outline: ; TODO*/
-} 
-
-.search::placeholder {
-  color: rgb(189, 189, 189);
-}
 
