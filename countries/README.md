@@ -1,4 +1,4 @@
-# global4net - zadanie domowe Junior Frontent Developer
+# global4net - zadanie domowe Junior Frontend Developer
 
 This project was made for [global4net.com](https://global4net.com)
 
